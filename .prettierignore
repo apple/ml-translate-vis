@@ -1,0 +1,6 @@
+# *.svelte
+dist/
+public/data/
+node_modules
+CODE_OF_CONDUCT.md
+CONTRIBUTING.md

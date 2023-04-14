@@ -1,0 +1,35 @@
+cff-version: 1.2.0
+message: 'If you use this software, please cite it as below.'
+authors:
+  - family-names: 'Robertson'
+    given-names: 'Samantha'
+  - family-names: 'Wang'
+    given-names: 'Zijie J.'
+  - family-names: 'Moritz'
+    given-names: 'Dominik'
+  - family-names: 'Kery'
+    given-names: 'Mary Beth'
+  - family-names: 'Hohman'
+    given-names: 'Fred'
+title: 'Angler: Helping Machine Translation Practitioners Prioritize Model Improvements'
+version: 1.0.0
+date-released: 2023-04-07
+url: 'https://github.com/apple/ml-translate-vis'
+preferred-citation:
+  type: conference-article
+  authors:
+    - family-names: 'Robertson'
+      given-names: 'Samantha'
+    - family-names: 'Wang'
+      given-names: 'Zijie J.'
+    - family-names: 'Moritz'
+      given-names: 'Dominik'
+    - family-names: 'Kery'
+      given-names: 'Mary Beth'
+    - family-names: 'Hohman'
+      given-names: 'Fred'
+  doi: '10.1145/3544548.3580790'
+  journal: 'Proceedings of the SIGCHI Conference on Human Factors in Computing Systems'
+  title: 'Angler: Helping Machine Translation Practitioners Prioritize Model Improvements'
+  year: 2023
+  organization: 'ACM'

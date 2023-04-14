@@ -1,0 +1,180 @@
+/* 
+For licensing see accompanying LICENSE file.
+Copyright (C) 2023 Apple Inc. All Rights Reserved.
+*/
+
+@import '../../define.scss';
+
+$padding-v: 5px;
+$padding-h: 8px;
+
+$background-color: change-color(
+  $color: white,
+  $alpha: 0.8
+);
+
+.filter-wrapper {
+  // width: 150px;
+  background-color: $background-color;
+  border: 1px solid $gray-300;
+  border-radius: $border-radius;
+
+  position: absolute;
+  right: 5px;
+  top: 5px;
+}
+
+.filter {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.filter-wrapper.unpinned {
+  width: auto;
+  height: auto;
+  border: 1px solid transparent;
+  background-color: transparent;
+
+  .header {
+    background-color: transparent;
+  }
+
+  .header-name {
+    display: none;
+  }
+
+  .config-row {
+    display: none;
+  }
+
+  .icon-wrapper {
+    background-color: hsla(0, 100%, 100%, 0);
+
+    &:hover {
+      background-color: change-color($color: $gray-200, $alpha: 0.5);
+    }
+  }
+}
+
+.header {
+  padding: $padding-v $padding-h;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  align-items: center;
+
+  .header-name {
+    font-weight: 500;
+  }
+}
+
+.icon-wrapper {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+
+  background-color: change-color($color: $gray-200, $alpha: 0.5);
+  padding: 5px 5px;
+  border-radius: 5px;
+
+  transition: background-color 100ms ease-in-out;
+}
+
+.svg-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  fill: $gray-600;
+  color: $gray-600;
+
+  :global(svg) {
+    width: 1rem;
+    height: 1rem;
+  }
+}
+
+.config-row {
+  padding: $padding-v $padding-h;
+  width: 100%;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  &.tb {
+    display: flex;
+    flex-direction: column;
+  }
+
+  input[type='checkbox'] {
+    padding: 0;
+    margin: 0;
+  }
+
+  .log-contour-label {
+    font-size: $font-d2;
+    margin-left: 6px;
+    line-height: 1;
+  }
+}
+
+$toggle-border-color: $gray-400;
+
+.sampling-toggle {
+  font-size: $font-d2;
+  width: 100%;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.toggle-item {
+  padding: 3px 2px;
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: $gray-600;
+  cursor: pointer;
+  line-height: 1;
+  background-color: change-color($color: $gray-50, $alpha: 0.5);
+
+  &:first-child {
+    border: 1px solid $toggle-border-color;
+    border-right: none;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+
+    &.selected {
+      border-right: 1px solid currentColor;
+    }
+  }
+
+  &:last-child {
+    border: 1px solid $toggle-border-color;
+    border-left: none;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+
+    &.selected {
+      border-left: 1px solid currentColor;
+    }
+  }
+
+  &:hover {
+    background-color: $gray-50;
+  }
+
+  &.selected {
+    border: 1px solid $blue-600;
+    color: $blue-600;
+    background-color: $blue-50;
+  }
+}
+
+.slider {
+  width: 100%;
+  margin-bottom: 0;
+}

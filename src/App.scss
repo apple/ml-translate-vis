@@ -1,0 +1,135 @@
+/* 
+For licensing see accompanying LICENSE file.
+Copyright (C) 2023 Apple Inc. All Rights Reserved.
+*/
+
+@import './define.scss';
+
+.main-app {
+  display: grid;
+  grid-template-columns: [start] 1fr [mid-start] auto [mid-end] 1fr [end];
+  grid-template-rows: [start] 1fr [content-start] auto [content-end] 3fr [end];
+
+  height: 100vh;
+  // max-height: 820px;
+  width: 100vw;
+  align-items: flex-end;
+
+  box-sizing: border-box;
+  overflow-x: hidden;
+  position: relative;
+
+  // background-image: linear-gradient($teal-50 1px, transparent 1px),
+  //   linear-gradient(to right, $teal-50 1px, white 1px);
+  // background-size: 16px 16px;
+
+  background-size: 20px 20px;
+  background-image: repeating-linear-gradient(
+    -45deg,
+    $teal-50 0,
+    $teal-50 1px,
+    white 0,
+    white 50%
+  );
+
+  // background-color: black;
+}
+
+.main-top {
+  grid-column: mid-start / mid-end;
+  grid-row: start / content-start;
+  padding: 18px 0 5px 0;
+
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+
+  // display: none;
+  // opacity: 0;
+
+  .title {
+    font-size: 2rem;
+    font-weight: 800;
+  }
+
+  .tagline {
+    font-size: 1.5rem;
+    font-weight: 400;
+  }
+}
+
+.main-left {
+  grid-column: start / mid-start;
+  grid-row: content-start / content-end;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-end;
+  height: 100%;
+
+  text-align: right;
+  cursor: default;
+
+  padding: 42px 20px 0 20px;
+
+  // display: none;
+
+  .title {
+    font-weight: 600;
+    margin-bottom: 5px;
+    padding-right: 5px;
+  }
+
+  .option {
+    cursor: pointer;
+    margin-bottom: 8px;
+    line-height: 1;
+    padding: 3px 5px;
+    border-radius: 3px;
+    background-color: transparent;
+    transition: background-color 100ms linear;
+
+    &:hover {
+      background-color: change-color($color: $gray-50, $lightness: 95%);
+    }
+
+    &.selected {
+      background-color: change-color($color: $gray-50, $lightness: 88%);
+    }
+  }
+}
+
+.main-view {
+  border-radius: $border-radius;
+  // box-shadow: 0 0 2px hsla(0, 0%, 0%, 0.2), 0 0 10px hsla(0, 0%, 0%, 0.09);
+  position: relative;
+  overflow-x: hidden;
+  background-color: $gray-200;
+
+  grid-column: mid-start / mid-end;
+  grid-row: content-start / content-end;
+  overflow: hidden;
+  box-shadow: 0px 0px 5px hsla(0, 0%, 0%, 0.08),
+    0px 0px 10px hsla(0, 0%, 0%, 0.08), 0px 5px 35px hsla(0, 0%, 0%, 0.15);
+}
+
+.table-view-container {
+  position: relative;
+  opacity: 1;
+  transition: opacity 500ms $ease-cubic-in-out;
+  z-index: 1;
+
+  &.dehighlight {
+    opacity: 0;
+  }
+}
+
+.detail-view-container {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: 2;
+  background-color: white;
+  overscroll-behavior-x: contain;
+}
