@@ -4,11 +4,10 @@ Angler is an interactive visualization system that helps machine translation (MT
 
 This code accompanies the research paper:
 
-**[Angler: Helping Machine Translation Practitioners Prioritize Model Improvements](https://machinelearning.apple.com/research/translate-vis)**  
+**[Angler: Helping Machine Translation Practitioners Prioritize Model Improvements][paper]**  
 Samantha Robertson*, Zijie J. Wang*, Dominik Moritz, Mary Beth Kery, Fred Hohman  
 _ACM Conference on Human Factors in Computing Systems (CHI), 2023._  
-\*Contributed equally.
-[Paper][paper], [Interactive demo][demo], [Code][code]
+[Paper][paper], [Interactive demo][demo], [Code][code], \*Contributed equally
 
 ## How to Use Angler?
 
