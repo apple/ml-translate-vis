@@ -4,6 +4,7 @@
   "version": "1.0.0",
   "license": "Apple Sample Code",
   "type": "module",
+  "private": true,
   "scripts": {
     "dev": "vite",
     "build": "vite build",
