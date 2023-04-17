@@ -12,6 +12,7 @@ export default defineConfig(({ command, mode }) => {
       case 'github': {
         return {
           build: {
+            base: '',
             outDir: 'dist'
           },
           plugins: [svelte()]
